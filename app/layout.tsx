@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { StackProvider, StackTheme } from "@stackframe/stack";
 import { stackServerApp } from "../stack";
 import { Inter } from "next/font/google";
-import {NextUIProvider} from "@nextui-org/react";
+import { NextUIProvider } from "@nextui-org/react";
 import "./globals.css";
 import { Providers } from "./providers";
 import NavbarMenu from "@/components/ui/navbar-menu";
-import { Toaster, toast } from 'sonner'
+import { Toaster, toast } from "sonner";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,20 +23,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Providers>
-        <NextUIProvider>   
-          
-          <body className={inter.className}>
+      <body className={inter.className}>
+        <Suspense>
+        <Providers>
+          <NextUIProvider>
             <StackProvider app={stackServerApp}>
               <StackTheme>
-              <NavbarMenu/>
-            {children}
-          </StackTheme>
-          </StackProvider>
-          </body>    
-        </NextUIProvider>
-      </Providers> 
-      <Toaster richColors/>
+                <NavbarMenu />
+                {children}
+              </StackTheme>
+            </StackProvider>
+          </NextUIProvider>
+        </Providers>
+          <Toaster richColors />
+          </Suspense>
+      </body>
     </html>
   );
 }
