@@ -20,7 +20,9 @@ const SignUpComponent = () => {
     // It is better to handle each error code separately, but we will just show the error code directly for simplicity here
     if (errorCode) {
       toast.error(errorCode.message);
+      return;
     }
+    toast.success("Thank you for signing up! Please check your email and follow the instructions to verify your account.")
   };
   return (
     <>
