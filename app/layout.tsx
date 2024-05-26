@@ -25,18 +25,18 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Suspense>
-        <Providers>
-          <NextUIProvider>
-            <StackProvider app={stackServerApp}>
-              <StackTheme>
-                <NavbarMenu />
-                {children}
-              </StackTheme>
-            </StackProvider>
-          </NextUIProvider>
-        </Providers>
+          <Providers>
+            <NextUIProvider>
+              <StackProvider app={stackServerApp}>
+                <StackTheme>
+                  <NavbarMenu />
+                  {children}
+                </StackTheme>
+              </StackProvider>
+            </NextUIProvider>
+          </Providers>
           <Toaster richColors />
-          </Suspense>
+        </Suspense>
       </body>
     </html>
   );

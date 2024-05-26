@@ -11,13 +11,12 @@ export default function Landing() {
 
   const router = useRouter();
   useEffect(() => {
-    if (user)
-      router.push("/home");
+    if (user) router.push("/home");
   }, []);
-  
+
   return (
     <>
-      <GlobeDemo/>
+      <GlobeDemo />
     </>
   );
 }

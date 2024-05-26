@@ -26,17 +26,17 @@ export default function NavbarMenu() {
         </Button>
       )}
 
-        {route == "/home" && user && (
-          <Button
-            onClick={() => user.signOut()}
-            className="text-white"
-            as={Link}
-            color="danger"
-            variant="shadow"
-          >
-            Sign Out
-          </Button>
-        )}
+      {route == "/home" && user && (
+        <Button
+          onClick={() => user.signOut()}
+          className="text-white"
+          as={Link}
+          color="danger"
+          variant="shadow"
+        >
+          Sign Out
+        </Button>
+      )}
       <TogglerButton />
     </nav>
   );

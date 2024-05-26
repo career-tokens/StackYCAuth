@@ -22,7 +22,9 @@ const SignUpComponent = () => {
       toast.error(errorCode.message);
       return;
     }
-    toast.success("Thank you for signing up! Please check your email and follow the instructions to verify your account.")
+    toast.success(
+      "Thank you for signing up! Please check your email and follow the instructions to verify your account."
+    );
   };
   return (
     <>

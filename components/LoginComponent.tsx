@@ -82,7 +82,12 @@ const LoginComponent = () => {
           required
           aria-required="true"
         />
-        <Link href="/forgot-password" className="text-[#3aaf9f] dark:text-[#5dd59c]">Forgot password?</Link>
+        <Link
+          href="/forgot-password"
+          className="text-[#3aaf9f] dark:text-[#5dd59c]"
+        >
+          Forgot password?
+        </Link>
         <button
           className="dark:text-gray-950 uppercase bg-[#3aaf9f] dark:bg-[#5dd59c] px-4 py-2 text-white rounded mt-8"
           type="submit"

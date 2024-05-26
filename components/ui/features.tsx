@@ -13,14 +13,16 @@ const ProjectsData = [
   {
     id: 2,
     name: "Beautiful Custom Pages",
-    description: "Experience beautiful custom signup and login pages.Click to read how to develop them using Stack.",
+    description:
+      "Experience beautiful custom signup and login pages.Click to read how to develop them using Stack.",
     link: "https://docs.stack-auth.com/docs/customization/page-examples/signup",
     image: "https://img.icons8.com/fluency/48/form.png",
   },
   {
     id: 3,
     name: "OAuth + Credentials Providers",
-    description: "Be more user friendly by giving them more freedom. Click to read how to implement using Stack",
+    description:
+      "Be more user friendly by giving them more freedom. Click to read how to implement using Stack",
     link: "https://docs.stack-auth.com/docs",
     image:
       "https://img.icons8.com/external-flat-design-circle/64/external-Modal-Popup-seo-and-web-flat-design-circle.png",
