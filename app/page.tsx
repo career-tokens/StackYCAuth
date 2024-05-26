@@ -13,7 +13,8 @@ export default function Landing() {
   useEffect(() => {
     if (user)
       router.push("/home");
-  })
+  }, []);
+  
   return (
     <>
       <GlobeDemo/>

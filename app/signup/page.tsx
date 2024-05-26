@@ -2,10 +2,22 @@
 
 import SignUpComponent from "@/components/SignUpComponent";
 import { AuroraBackground } from "@/components/ui/aurora-backgroun";
+import { useStackApp } from "@stackframe/stack";
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/navigation";
+import React, { useEffect } from "react";
 
 const SignUp: React.FC = () => {
+
+  const app = useStackApp();
+  const user = app.useUser();
+
+  const router = useRouter();
+  useEffect(() => {
+    if (user)
+      router.push("/home");
+  }, []);
+  
   return (
     <div className="flex flex-col lg:flex-row">
       <div className="bg-[#3aaf9f] dark:bg-[#5dd59c] h-screen grid place-items-center w-full lg:w-[30%]">

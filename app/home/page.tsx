@@ -13,10 +13,11 @@ const Home = () => {
     const user = app.useUser();
   
     const router = useRouter();
-    useEffect(() => {
-      if (!user)
-        router.push("/");
-    })
+  useEffect(() => {
+    if (!user)
+      router.push("/");
+  }, []);
+  
   return (
       <div>
                 <style>

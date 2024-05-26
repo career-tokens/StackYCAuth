@@ -4,7 +4,10 @@ const nextConfig = {
         remotePatterns: [
           {
             hostname: 'img.icons8.com',
-          },
+        },
+        {
+            hostname:"assets.mongodb-cdn.com",
+          }
         ],
       },
 };

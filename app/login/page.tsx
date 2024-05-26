@@ -4,11 +4,19 @@ import LoginComponent from "@/components/LoginComponent";
 import { AuroraBackground } from "@/components/ui/aurora-backgroun";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect } from "react";
+import { useStackApp } from "@stackframe/stack";
 
 const Login: React.FC = () => {
 
+  const app = useStackApp();
+  const user = app.useUser();
+
   const router = useRouter();
+  useEffect(() => {
+    if (user)
+      router.push("/home");
+  }, []);
 
   return (
     <div
