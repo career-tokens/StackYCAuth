@@ -15,18 +15,9 @@ const VerifyEmailComponent = () => {
   const router = useRouter();
     
     useEffect(() => {
-      if (!user) {
-        toast.error("User not found. Please login/signup first.");
-        router.push("/login");
-      }
-      else if (user && user.primaryEmailVerified) {
-        toast.success("Email is already verified. Redirecting to home page.");
-        router.push("/home");
-      }
-      else {
         onSubmit();
         document.addEventListener("keydown", onKeyDown);
-      }
+      
         return () => {
           document.removeEventListener("keydown", onKeyDown);
         }
